@@ -9,4 +9,8 @@ export class CreatePokemonDto {
   @IsString()
   @MinLength(1)
   name: string;
+
+  constructor(name, no) {
+    (this.name = name), (this.no = no);
+  }
 }

@@ -23,7 +23,7 @@ export class PokemonService {
   }
 
   findAll() {
-    return `This action returns all pokemon`;
+    return this.pokemonModel.find();
   }
 
   async findOne(id: string) {
@@ -31,7 +31,8 @@ export class PokemonService {
       throw new BadRequestException(`El id ${id} no es válido`);
     }
     const pokemon: Pokemon = await this.pokemonModel.findById(id);
-
+    if (!pokemon)
+      throw new NotFoundException(`No se encontro el pokemon con id ${id}`);
     return pokemon;
   }
 

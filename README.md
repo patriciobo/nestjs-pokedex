@@ -23,6 +23,12 @@ npm i -g @nest/cli
 docker-compose up -d
 ```
 
+5. Reconstruir BD
+
+```
+http://slocalhost:3000/api/v2/seed
+```
+
 ### Stack Utilizado
 
 - MongoDB
