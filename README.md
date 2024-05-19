@@ -23,11 +23,21 @@ npm i -g @nest/cli
 docker-compose up -d
 ```
 
+5. Correr proyecto
+
+```
+yarn start:dev
+```
+
 5. Reconstruir BD
 
 ```
 http://slocalhost:3000/api/v2/seed
 ```
+
+6. Clonar el archivo `.env.template` y renombrar la copia a `.env`
+
+7. Llenar las variables de entorno definidas en el `.env`
 
 ### Stack Utilizado
 
